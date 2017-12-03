@@ -29,8 +29,8 @@ Makefile: Makefile.in ../config.status
 
 # End configuration
 
-jupiter: main.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ main.c
+jupiter: $(srcdir)/main.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ $(srcdir)/main.c
 
 clean:
 	-rm jupiter
