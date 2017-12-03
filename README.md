@@ -1,2 +1,5 @@
 # jupiter
-testing on autotools
+Testing on autotools
+
+
+Examples from the book
