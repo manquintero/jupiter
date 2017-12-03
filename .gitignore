@@ -25,6 +25,7 @@ Makefile.in
 /stamp-h1
 /config.log
 /config.status
+/config.h
 
 # https://www.gnu.org/software/libtool/
 
