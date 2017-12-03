@@ -9,7 +9,7 @@ distdir = $(tarname)-$(version)
 # Prefix-specific substitution variables
 prefix         = @prefix@
 exec_prefix    = @exec_prefix@
-bindir         = @bindif@
+bindir         = @bindir@
 
 all clean check install uninstall jupiter:
 	cd src && $(MAKE) $@
