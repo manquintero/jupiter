@@ -18,8 +18,16 @@ $(distdir): FORCE
 	cp src/Makefile $(distdir)/src
 	cp src/main.c $(distdir)/src
 
+distcheck: $(distdir).tar.gz
+	@echo "*** Package $(distdir).tar.gz is being check for distribution"
+	gzip -cd $(distdir).tar.gz | tar xvf -
+	cd $(distdir) && $(MAKE) all
+	cd $(distdir) && $(MAKE) clean
+	rm -rf $(distdir)
+	@echo "*** Package $(distdir).tar.gz is deady for distribution"
+
 FORCE:
-	-rm $(distdir).tar.gz >/dev/null 2>&1
+	-rm -f $(distdir).tar.gz >/dev/null 2>&1
 	-rm -rf $(distdir) >/dev/null 2>&1
 
 .PHONY: FORCE all clean dist
