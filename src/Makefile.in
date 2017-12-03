@@ -11,6 +11,11 @@ prefix          = @prefix@
 exec_prefix     = @exec_prefix@
 bindir          = @bindir@
 
+# VPATH-related subsitution variables
+srcdir          = @srcdir@
+VPATH           = @srcdir@
+
+# Compilation flags
 CFLAGS    ?= -g -O0
 
 all: jupiter
