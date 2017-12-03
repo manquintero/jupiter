@@ -23,6 +23,8 @@ Makefile.in
 /install-sh
 /missing
 /stamp-h1
+/config.log
+/config.status
 
 # https://www.gnu.org/software/libtool/
 
