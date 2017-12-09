@@ -17,6 +17,7 @@ VPATH           = @srcdir@
 
 # Tool-specific substitution variables
 CC              = @CC@
+DEFS            = @DEFS@
 LIBS            = @LIBS@
 CFLAGS          = @CFLAGS@
 CPPFLAGS        = @CPPFLAGS@
@@ -37,7 +38,7 @@ Makefile: Makefile.in ../config.status
 # End configuration
 
 jupiter: $(srcdir)/main.c
-	$(CC) $(CFLAGS) $(CPPFLAGS) -I. -I$(srcdir) -I.. -o $@ $(srcdir)/main.c $(LIBS)
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(DEFS) -I. -I$(srcdir) -I.. -o $@ $(srcdir)/main.c $(LIBS)
 
 clean:
 	-rm jupiter

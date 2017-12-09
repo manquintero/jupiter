@@ -1,6 +1,13 @@
+#if HAVE_CONFIG_H
+# include <config.h>
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <pthread.h>
+
+#if HAVE_PTHREAD_H
+# include <pthread.h>
+#endif
 
 static void * print_it(void * data)
 {
@@ -10,9 +17,13 @@ static void * print_it(void * data)
 
 int main(int argc, char * argv[])
 {
+#if HAVE_PTHREAD_H
 	pthread_t tid;
 	pthread_create(&tid, 0, print_it, argv[0]);
 	pthread_join(tid, 0);
+#else
+	print_it(argv[0]);
+#endif
 	return 0;
 }
 
