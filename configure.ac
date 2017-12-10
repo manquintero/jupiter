@@ -22,10 +22,11 @@ if test "x${have_pthreads}" = xyes; then
 fi
 
 if test "x${have_pthreads}" = xno; then
-  AC_MSG_WARN([
+  AC_MSG_ERROR([
 ---------------------------------------------
-  Unable to find pthreads on this system.
-  Building a signle=threaded version.
+  The pthread library and header file
+  required to build jupiter. Stopping...
+  Check 'config.log' for more information
 ---------------------------------------------])
 fi
 
