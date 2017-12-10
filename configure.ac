@@ -12,7 +12,8 @@ AC_PROG_INSTALL
 
 # Checks for command-line options
 AC_ARG_ENABLE([async-exec],
-  [  --disable-async-exec    disable async execution feature],
+  [AS_HELP_STRING([--disable-async-exec],
+    [disable async execution @<:@default: no@:>@])],
   [async_exec=${enableval}], [async_exec=yes])
 
 # Checks for libraries.
