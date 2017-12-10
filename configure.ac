@@ -50,3 +50,20 @@ fi
 AC_CONFIG_FILES([Makefile
                  src/Makefile])
 AC_OUTPUT
+
+echo \
+" -----------------------------------------------
+  ${PACKAGE_NAME} version ${PACKAGE_VERSION}
+
+  Prefix: '${prefix}'.
+  Compiler '${CC} ${CFLAGS} ${CPPFLAGS}'
+
+  Package features:
+    Async Execution ${async_exec}
+
+  Now type 'make @<:@<target>@:>@'
+    where the optional <target> is:
+      all                - build all binaries
+      install            - install everything
+
+-----------------------------------------------"
