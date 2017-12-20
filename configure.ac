@@ -10,6 +10,8 @@ AC_CONFIG_HEADERS([config.h])
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_INSTALL
+AC_PROG_RANLIB
+AC_PROG_CC_C_O
 
 # Checks for command-line options
 AC_ARG_ENABLE([async-exec],
