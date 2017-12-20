@@ -13,6 +13,9 @@ AC_PROG_INSTALL
 AC_PROG_RANLIB
 AC_PROG_CC_C_O
 
+# Rules
+AM_SILENT_RULES
+
 # Checks for command-line options
 AC_ARG_ENABLE([async-exec],
   [AS_HELP_STRING([--disable-async-exec],
