@@ -39,3 +39,5 @@ Makefile.in
 # Project related
 Makefile
 jupiter-*tar.gz
+*.o
+.deps/
