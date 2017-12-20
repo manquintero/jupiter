@@ -43,3 +43,4 @@ jupiter-*tar.gz
 .deps/
 *.log
 src/greptests.sh**
+*.a
