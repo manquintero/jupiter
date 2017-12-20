@@ -49,6 +49,7 @@ fi
 # Checks for library functions.
 
 AC_CONFIG_FILES([Makefile
+                 common/Makefile
                  src/Makefile])
 AC_OUTPUT
 
