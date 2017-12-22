@@ -41,8 +41,10 @@ Makefile
 jupiter-*tar.gz
 *.o
 .deps/
+.libs/
 *.log
 src/greptests.sh**
 *.a
 libtool
 *.lo
+*.la
