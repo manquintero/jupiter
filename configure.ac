@@ -7,10 +7,14 @@ AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/main.c])
 AC_CONFIG_HEADERS([config.h])
 
+#libtool
+LT_PREREQ([2.2])
+LT_INIT([dlopen])
+
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_INSTALL
-AC_PROG_RANLIB
+# AC_PROG_RANLIB
 AC_PROG_CC_C_O
 
 # Rules
@@ -55,6 +59,8 @@ fi
 
 AC_CONFIG_FILES([Makefile
                  common/Makefile
+                 include/Makefile
+                 libjup/Makefile
                  src/Makefile])
 AC_OUTPUT
 

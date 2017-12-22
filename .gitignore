@@ -44,3 +44,5 @@ jupiter-*tar.gz
 *.log
 src/greptests.sh**
 *.a
+libtool
+*.lo
