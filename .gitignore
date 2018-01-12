@@ -48,3 +48,4 @@ src/greptests.sh**
 libtool
 *.lo
 *.la
+*.so

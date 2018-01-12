@@ -26,10 +26,8 @@ AC_ARG_ENABLE([async-exec],
     [disable async execution @<:@default: no@:>@])],
   [async_exec=${enableval}], [async_exec=yes])
 
-# Checks for libraries.
-
-# Checks for header files.
-AC_CHECK_HEADERS([stdlib.h])
+# Checks for header files (2).
+AC_CHECK_HEADERS([stdlib.h dlfcn.h])
 
 if test "x${async_exec}" = xyes; then
   have_pthreads=no
@@ -53,15 +51,19 @@ if test "x${async_exec}" = xyes; then
   AC_DEFINE([ASYNC_EXEC], 1, [async execution enabled])
 fi
 
-# Checks for typedefs, structures, and compiler characteristics.
 
+# Checks for libraries.
+# Checks for typedefs, structures, and compiler characteristics.
 # Checks for library functions.
+AC_SEARCH_LIBS([dlopen], [dl])
+
 
 AC_CONFIG_FILES([Makefile
                  common/Makefile
                  include/Makefile
                  libjup/Makefile
-                 src/Makefile])
+                 src/Makefile
+                 src/modules/hithere/Makefile])
 AC_OUTPUT
 
 echo \
@@ -70,6 +72,7 @@ echo \
 
   Prefix: '${prefix}'.
   Compiler '${CC} ${CFLAGS} ${CPPFLAGS}'
+  Libraries: '${LIBS}'
 
   Package features:
     Async Execution ${async_exec}
