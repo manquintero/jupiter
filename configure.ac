@@ -27,7 +27,7 @@ AC_ARG_ENABLE([async-exec],
   [async_exec=${enableval}], [async_exec=yes])
 
 # Checks for header files (2).
-AC_CHECK_HEADERS([stdlib.h dlfcn.h])
+AC_CHECK_HEADERS([stdlib.h ltdl.h])
 
 if test "x${async_exec}" = xyes; then
   have_pthreads=no
@@ -55,7 +55,7 @@ fi
 # Checks for libraries.
 # Checks for typedefs, structures, and compiler characteristics.
 # Checks for library functions.
-AC_SEARCH_LIBS([dlopen], [dl])
+AC_SEARCH_LIBS([lt_dlopen], [ltdl])
 
 
 AC_CONFIG_FILES([Makefile
